@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        form {
+            max-width: 150px;
+            margin: auto;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center><h1>Login Page</h1></center>
+    <form id="contactForm">
+        <label>Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>
+   <!--          Mobile no:</label>
+        <input type="number" id="number" name="number"> -->
+        <label>Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <center>        <button type="menu" onclick="submitForm()">Submit</button>
+        </center>
+    </form>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Display the form data in an alert
+            var formData = "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Message: " + message;
+            alert(formData);
+        }
+    </script>
+</body>
+
+</html>
